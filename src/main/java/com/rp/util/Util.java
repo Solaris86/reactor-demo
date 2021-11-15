@@ -2,6 +2,7 @@ package com.rp.util;
 
 import com.github.javafaker.Faker;
 import lombok.experimental.UtilityClass;
+import org.reactivestreams.Subscriber;
 
 import java.util.function.Consumer;
 
@@ -27,10 +28,22 @@ public class Util {
     }
 
     public void sleepSeconds(int seconds) {
+        sleepMillis(seconds * 1000);
+    }
+
+    public void sleepMillis(int millis) {
         try {
-            Thread.sleep(seconds * 1000L);
+            Thread.sleep(millis);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    public Subscriber<Object> subscriber() {
+        return new DefaultSubscriber();
+    }
+
+    public Subscriber<Object> subscriber(String name) {
+        return new DefaultSubscriber(name);
     }
 }

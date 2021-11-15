@@ -8,6 +8,8 @@
     <artifactId>reactor-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <javafaker.version>1.0.2</javafaker.version>
         <lombok.version>1.18.22</lombok.version>
         <junit-jupiter-engine.version>5.8.1</junit-jupiter-engine.version>
@@ -54,10 +56,5 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-    </properties>
 
 </project>
