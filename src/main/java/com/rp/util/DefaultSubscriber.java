@@ -12,7 +12,7 @@ public class DefaultSubscriber implements Subscriber<Object> {
     }
 
     public DefaultSubscriber(String name) {
-        this.name = name + " - ";
+        this.name = name;
     }
 
     @Override
