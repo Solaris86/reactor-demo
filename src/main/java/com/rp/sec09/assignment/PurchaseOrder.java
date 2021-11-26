@@ -1,4 +1,4 @@
-package com.rp.sec05.assignment;
+package com.rp.sec09.assignment;
 
 import com.rp.util.Util;
 import lombok.Data;
@@ -23,4 +23,5 @@ public class PurchaseOrder {
         this.category = Util.faker().commerce().department();
         this.quantity = Util.faker().random().nextInt(1, 10);
     }
+
 }
